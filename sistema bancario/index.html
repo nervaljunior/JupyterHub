@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema Bancário</title>
+</head>
+<body>
+    <h1>Sistema Bancário</h1>
+
+    <form method="POST">
+        <label>Saldo: R$ {{ saldo }}</label><br>
+        <label>Limite: R$ {{ limite }}</label><br>
+        <textarea rows="10" cols="50">{{ extrato }}</textarea><br>
+        <label>Número de saques: {{ numero_saques }}</label><br>
+
+        <label>Opção:</label>
+        <select name="opcao">
+            <option value="d">Depositar</option>
+            <option value="s">Sacar</option>
+            <option value="t">Transferir</option>
+        </select>
+
+        <label>Valor:</label>
+        <input type="number" name="valor" step="0.01"><br>
+
+        <label>Conta de Destino (apenas para transferência):</label>
+        <input type="text" name="conta_destino"><br>
+
+        <input type="submit" value="Executar">
+    </form>
+
+    {% if mensagem %}
+        <p>{{ mensagem }}</p>
+    {% endif %}
+</body>
+</html>
