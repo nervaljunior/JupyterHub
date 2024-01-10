@@ -1,1 +1,2 @@
-# AI-SolverNet-Deep-Learning-for-Dataset
+# JupyterHub
+JupyterHub, collection of Jupyter Notebook analyses and challenges
